@@ -1,10 +1,17 @@
 import '../styles/Home.css';
 
+import CardResults from '.././layouts/card_results.js'
+
+import video from '.././assets/video/Robot Reveal _ 2021.mp4'
+import NED from '.././assets/images/NED.jpg'
+
 function Home() {
   return (
     <>
+      {/* VIDEO */}
+
       <div className='front'>
-        <video src='./assets/video/Robot Reveal _ 2021.mp4'  loop muted autoPlay/>
+        <video src={video}  loop muted autoPlay/>
         <div className='fade' />
         <div className='contain'>
           <p>
@@ -22,6 +29,9 @@ function Home() {
           </p>
         </div>
       </div>
+      
+      {/* ABOUT */}
+
       <div className='about'>
         <div className='left'>
           <h1>About Our Team</h1>
@@ -30,20 +40,36 @@ function Home() {
           <p>We started on this path since 2018. Every year we evolve and see that "Sky is not the limit". We make robots, but it's not enough. We want to make history! Season 8 brings us new challenges, but we're ready to give it our best shot and capitalize on Gracious Professionalism. Gracious team, Gracious work, Gracious minds. The Centerstage Challenge has arrived at our door - we're ready to give it our best (again). Welcome to our website! This is us.</p>
         </div>
         <div className='right'>
-          <img src='./assets/images/NED.jpg' />
+          <img src={NED} />
         </div>
       </div>
+
+      {/* RESULTS */}
+
       <div className='results'>
         <h1>The most important results</h1>
-        <div className='card'>
-          <div className='left'>
-            <img />
-          </div>
-          <div className='right'>
-            <h1>LOC</h1>
-            <h3>Paragraf</h3>
-          </div>
-        </div>
+        
+        <CardResults 
+          image_url={NED} 
+          position="l" 
+          title="North East Dynamics" 
+          description="20th place out of 160"
+        />
+
+        <CardResults 
+          image_url={NED} 
+          position="r" 
+          title="North East Dynamics" 
+          description="20th place out of 160"
+        />
+
+        <CardResults 
+          image_url={NED} 
+          position="l" 
+          title="North East Dynamics" 
+          description="20th place out of 160"
+        />
+        
       </div>
     </>
   );

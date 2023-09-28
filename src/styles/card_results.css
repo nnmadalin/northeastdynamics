@@ -1,0 +1,30 @@
+.card_results{
+   display: flex;
+   align-items: center;
+   gap: 30px;
+   max-width:90%;
+   width: calc(1400px - 140px);
+   height: 300px;
+   padding: 30px 70px;
+}
+.card_results_r{
+   flex-direction: row-reverse;
+}
+.card_results .left{
+   flex: 1;
+}
+.card_results .left{
+   max-width: 65%;
+   height: 100%;
+}
+.card_results .left img{
+   width: 100%;
+   height:  100%;
+   object-fit: cover;
+   border-radius: 15px;
+}
+.card_results .right h1{
+   margin: 0;
+   color: #F1F102;
+   font-size: 45px;
+}
