@@ -1,0 +1,107 @@
+.card_social {
+   width: 500px;
+   height: 290px;
+   border-radius: 10px;
+   padding: 30px 35px;
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   gap: 40px;
+   font-family: 'Roboto', sans-serif;
+}
+.card_social .app{
+   flex: 0 0 auto;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 15px;
+   font-weight: bold;
+   font-size: 20px;
+}
+.card_social .app img{
+   width: 65px;
+   height: 65px;
+   object-fit: contain;
+   border-radius: 5px;
+}
+.card_social .post{
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 10px;
+   height: 100%;
+}
+.card_social .post .image{
+   flex: 1;
+   overflow: hidden;
+   border-radius: 15px;
+}
+.card_social .post .image img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+.card_social .post p{
+   width: 100%;
+   max-height: 50px;
+   -webkit-line-clamp: 2;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-weight: bold;
+}
+.card_social .post .submit{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+.card_social .post .submit a{
+   width: 150px;
+   height: 40px;
+   background-color: rgba(0, 0, 0, 0.7);
+   border-radius: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 15px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: all 0.5s;
+   text-decoration: none;
+   color: white;
+}
+.card_social .post .submit a:hover{
+   scale: 1.05;
+}
+
+.facebook{
+   background: hsla(221, 73%, 25%, 1);
+   background: linear-gradient(135deg, hsla(221, 73%, 25%, 1) 0%, hsla(222, 50%, 53%, 1) 100%);
+   background: -moz-linear-gradient(135deg, hsla(221, 73%, 25%, 1) 0%, hsla(222, 50%, 53%, 1) 100%);
+   background: -webkit-linear-gradient(135deg, hsla(221, 73%, 25%, 1) 0%, hsla(222, 50%, 53%, 1) 100%);
+   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#112F6F", endColorstr="#4B6FC3", GradientType=1 );
+}
+.instagram{
+   background: hsla(276, 83%, 25%, 1);
+   background: linear-gradient(135deg, hsla(276, 83%, 25%, 1) 0%, hsla(283, 82%, 40%, 1) 100%);
+   background: -moz-linear-gradient(135deg, hsla(276, 83%, 25%, 1) 0%, hsla(283, 82%, 40%, 1) 100%);
+   background: -webkit-linear-gradient(135deg, hsla(276, 83%, 25%, 1) 0%, hsla(283, 82%, 40%, 1) 100%);
+   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4B0B75", endColorstr="#8A12B9", GradientType=1 );
+}
+.youtube{
+   background: hsla(0, 69%, 18%, 1);
+   background: linear-gradient(135deg, hsla(0, 69%, 18%, 1) 0%, hsla(0, 78%, 33%, 1) 100%);
+   background: -moz-linear-gradient(135deg, hsla(0, 69%, 18%, 1) 0%, hsla(0, 78%, 33%, 1) 100%);
+   background: -webkit-linear-gradient(135deg, hsla(0, 69%, 18%, 1) 0%, hsla(0, 78%, 33%, 1) 100%);
+   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#4C0E0E", endColorstr="#971313", GradientType=1 );
+}
+.tiktok{
+   background: rgb(13, 27, 77);
+   background: linear-gradient(135deg, rgb(13, 27, 77) 0%, rgb(42, 80, 121) 100%);
+   background: -moz-linear-gradient(135deg, rgb(13, 27, 77)0%, rgb(42, 80, 121) 100%);
+   background: -webkit-linear-gradient(135deg, rgb(13, 27, 77) 0%, rgb(42, 80, 121) 100%);
+   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1A2A66", endColorstr="#1F5995", GradientType=1 );
+}

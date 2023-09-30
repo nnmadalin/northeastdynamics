@@ -170,4 +170,13 @@
 }
 .social h1{
    font-size: 45px;
+   margin-bottom: 30px;
+}
+.social .cards{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 80%;
+   gap: 50px;
 }

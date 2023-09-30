@@ -2,6 +2,7 @@ import '../styles/Home.css';
 
 import CardResults from '.././layouts/card_results.js'
 import CardSponsors from '.././layouts/card_sponsors.js'
+import {CardSocial_TikTok, CardSocial_Youtube, CardSocial_Facebook, CardSocial_Instagram} from '.././layouts/card_social.js'
 
 import video from '.././assets/video/Robot Reveal _ 2021.mp4'
 import about from '.././assets/images/about.jpg'
@@ -133,7 +134,23 @@ function Home() {
         <h1>The lates posts on our social relays</h1>
 
         <div className='cards'>
-
+          <CardSocial_Instagram 
+            image_url="https://www.dorohoinews.ro/app/gethumbDetails.php?id=193653&w=1500&h=1500"
+            description="display: -webkit-box;"
+            redirect_url="https://www.popascucorani.ro/"
+          />
+          <CardSocial_Facebook
+            image_url="https://www.dorohoinews.ro/app/gethumbDetails.php?id=193653&w=1500&h=1500"
+            description="display: -webkit-box;"
+          />
+          <CardSocial_Youtube
+            image_url="https://www.dorohoinews.ro/app/gethumbDetails.php?id=193653&w=1500&h=1500"
+            description="display: -webkit-box;"
+          />
+          <CardSocial_TikTok
+            image_url="https://www.dorohoinews.ro/app/gethumbDetails.php?id=193653&w=1500&h=1500"
+            description="display: -webkit-box;"
+          />
         </div>
       </div>
 
