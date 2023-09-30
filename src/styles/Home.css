@@ -103,8 +103,55 @@
    padding: 50px 0px;
    color: white;
    gap: 40px;
+   width: 100%;
 }
 .results h1{
    font-size: 45px;
    margin-bottom: 30px;
+}
+.results .cards{
+   max-width: 80%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 50px;
+}
+
+.sponsors{
+   background-color: #111D28;
+   font-family: 'Roboto', sans-serif;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 50px 0px;
+   color: white;
+   gap: 40px;
+   width: 100%;
+}
+.sponsors .title{
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   flex-direction: column;
+   gap: 10px;
+   margin-bottom: 30px;
+}
+.sponsors .title h1{
+   font-size: 45px;
+}
+.sponsors .title h3{
+   color: #F1F102;
+   font-size: 23px;
+   word-spacing: 1px;
+}
+.sponsors .cards{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 40px;
+   flex-wrap: wrap;
+   width: 1300px;
+   max-width: 85%;
 }

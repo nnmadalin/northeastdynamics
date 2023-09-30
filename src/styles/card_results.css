@@ -1,21 +1,26 @@
 .card_results{
    display: flex;
    align-items: center;
-   gap: 30px;
+   gap: 40px;
    max-width:90%;
    width: calc(1400px - 140px);
-   height: 300px;
+   height: auto;
    padding: 30px 70px;
+   flex-wrap: wrap;
 }
 .card_results_r{
    flex-direction: row-reverse;
+   text-align: right!important;
 }
 .card_results .left{
+   flex: 1 auto;
+   height: 350px;
+   min-width: 450px;
+}
+.card_results .right{
    flex: 1;
-}
-.card_results .left{
-   max-width: 65%;
-   height: 100%;
+   text-align: left;
+   min-width: 40%;
 }
 .card_results .left img{
    width: 100%;

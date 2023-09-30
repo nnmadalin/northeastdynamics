@@ -1,9 +1,19 @@
 import '../styles/Home.css';
 
 import CardResults from '.././layouts/card_results.js'
+import CardSponsors from '.././layouts/card_sponsors.js'
 
 import video from '.././assets/video/Robot Reveal _ 2021.mp4'
 import NED from '.././assets/images/NED.jpg'
+
+
+import consiliul_local from '.././assets/sponsors/clDorohoi.png'
+import dorohoinews from '.././assets/sponsors/dorohoinews.png'
+import magistra from '.././assets/sponsors/magistra.png'
+import miracom from '.././assets/sponsors/miracom.png'
+import cucorani from '.././assets/sponsors/popascucorani.png'
+import soofa from '.././assets/sponsors/soofa.png'
+import symm from '.././assets/sponsors/symmetrica.png'
 
 function Home() {
   return (
@@ -49,28 +59,67 @@ function Home() {
       <div className='results'>
         <h1>The most important results</h1>
         
-        <CardResults 
-          image_url={NED} 
-          position="l" 
-          title="North East Dynamics" 
-          description="20th place out of 160"
-        />
+        <div className='cards'>
+          <CardResults 
+            image_url={NED} 
+            position="l" 
+            title="National Championship 2023" 
+            description="20th place out of 160"
+          />
 
-        <CardResults 
-          image_url={NED} 
-          position="r" 
-          title="North East Dynamics" 
-          description="20th place out of 160"
-        />
+          <CardResults 
+            image_url={NED} 
+            position="r" 
+            title="Regional robotics 2023" 
+            description="Control Award 2nd place"
+          />
 
-        <CardResults 
-          image_url={NED} 
-          position="l" 
-          title="North East Dynamics" 
-          description="20th place out of 160"
-        />
-        
+          <CardResults 
+            image_url={NED} 
+            position="l" 
+            title="National Championship 2021" 
+            description="Winning Alliance 3rd place, Innovate Award 3rd place"
+          />
+        </div>
       </div>
+
+      {/* SPONSORS */}
+
+      <div className='sponsors'>
+        <div className='title'>
+          <h1>Our Sponsors</h1>
+          <h3>We thank all the sponsors for supporting us!</h3>
+        </div>
+
+        <div className='cards'>
+          <CardSponsors 
+            image_url={consiliul_local}
+          />
+          <CardSponsors 
+            image_url={dorohoinews}
+            redirect_url="https://www.dorohoinews.ro"
+          />
+          <CardSponsors 
+            image_url={soofa}
+          />
+          <CardSponsors 
+            image_url={magistra}
+          />
+          <CardSponsors 
+            image_url={symm}
+          />
+          <CardSponsors 
+            image_url={miracom}
+          />
+          <CardSponsors 
+            image_url={cucorani}
+          />
+        </div>
+      </div>
+
+      {/* SOCIAL MEDIA */}
+
+      
     </>
   );
 }
