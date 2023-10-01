@@ -1,0 +1,89 @@
+footer{
+   width: 100%;
+   min-height: 320px;
+   padding-bottom: 20px;
+   background-color: #3F4452;
+   display: flex;
+   flex-direction: column;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   gap: 20px;
+}
+footer .container, .footer .reserve{
+   flex: 1 auto;
+}
+footer .container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+footer .container .card{
+   flex: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 20px;
+   color: white;
+}
+footer .container .left .social_links{
+   width: 300px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 28px;
+}
+footer .container .left .social_links svg{
+   transition: all 0.5s;
+   cursor: pointer;
+}
+footer .container .left .social_links svg:hover{
+   scale: 1.1;
+   color: #F1F102;
+}
+footer .container .left img{
+   width: 300px;
+}
+
+footer .container .center .rows{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 40px;
+}
+footer .container .center .row{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   transition: all 0.5s;
+}
+footer .container .center .row:hover{
+   scale: 1.05;
+}
+footer .container .center .row svg{
+   font-size: 28px;
+}
+
+footer .container .right .contain{
+   display: flex;
+   justify-items: center;
+   flex-direction: column;
+   gap: 30px;
+}
+footer .container .right .contain a{
+   text-decoration: none;
+   color: #F1F102;
+}
+footer .container .right .contain p{
+   transition: all 0.5s;
+}
+footer .container .right .contain p:hover{
+   scale: 1.05;
+}
+
+footer span{
+   text-align: center;
+   color: white;
+}

@@ -1,3 +1,6 @@
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+
+
 import '../styles/Home.css';
 
 import CardResults from '.././layouts/card_results.js'
@@ -47,7 +50,7 @@ function Home() {
       
       {/* ABOUT */}
 
-      <div className='about'>
+      <div className='about' name='about'>
         <div className='left'>
           <h1>About Our Team</h1>
           <h3>North East Dynamics</h3>
@@ -61,7 +64,7 @@ function Home() {
 
       {/* RESULTS */}
 
-      <div className='results'>
+      <div className='results' id='results'>
         <h1>The most important results</h1>
         
         <div className='cards'>
@@ -90,7 +93,7 @@ function Home() {
 
       {/* SPONSORS */}
 
-      <div className='sponsors'>
+      <div className='sponsors' id='sponsors'>
         <div className='title'>
           <h1>Our Sponsors</h1>
           <h3>We thank all the sponsors for supporting us!</h3>
@@ -130,7 +133,7 @@ function Home() {
 
       {/* SOCIAL MEDIA */}
 
-      <div className='social'>
+      <div className='social' id='media'>
         <h1>The lates posts on our social relays</h1>
 
         <div className='cards'>

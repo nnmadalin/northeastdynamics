@@ -167,6 +167,7 @@
    color: white;
    gap: 40px;
    width: 100%;
+   padding-bottom: 70px;
 }
 .social h1{
    font-size: 45px;
@@ -177,6 +178,8 @@
    align-items: center;
    justify-content: center;
    flex-wrap: wrap;
-   width: 80%;
+   max-width: 1500px;
+   width: 100%;
    gap: 50px;
 }
+
