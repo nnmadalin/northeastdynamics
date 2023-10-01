@@ -8,12 +8,12 @@ import '.././styles/Navbar.css'
 import logo from '.././assets/images/logo.png'
 
 function NavBar() {
-   const openNavBar = () => {
-      if (window.innerWidth < 1000) {
-         document.body.classList.add('overflow-hidden');
-      } else {
-         document.body.classList.remove('overflow-hidden');
-      }
+   const removeNavbar = () => {
+      document.body.classList.remove('overflow-hidden');
+      document.querySelector('nav').classList.remove('show');
+      document.querySelector('nav').querySelector('.left').classList.remove('show');
+      document.querySelector('nav').querySelector('.right').classList.remove('show');
+      document.querySelector('nav').querySelector('.center').classList.remove('show');
    };
 
    const [showButton, setShowButton] = useState(false);
@@ -62,6 +62,7 @@ function NavBar() {
                <Link
                   data-text="About us"
                   to="about"
+                  onClick={removeNavbar}
                   spy={true}
                   isDynamic={true}
                   smooth={true}
@@ -73,6 +74,7 @@ function NavBar() {
                <Link
                   data-text="Our results"
                   to="results"
+                  onClick={removeNavbar}
                   spy={true}
                   isDynamic={true}
                   smooth={true}
@@ -83,6 +85,7 @@ function NavBar() {
                <Link
                   data-text="Sponsors"
                   to="sponsors"
+                  onClick={removeNavbar}
                   spy={true}
                   isDynamic={true}
                   smooth={true}
@@ -93,6 +96,7 @@ function NavBar() {
                <Link
                   data-text="Media"
                   to="media"
+                  onClick={removeNavbar}
                   spy={true}
                   isDynamic={true}
                   smooth={true}

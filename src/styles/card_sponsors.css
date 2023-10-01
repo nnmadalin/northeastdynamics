@@ -25,3 +25,13 @@
    object-fit: contain;
    mix-blend-mode: multiply;
 }
+
+@media only screen and (max-width: 1000px){
+   .sponsors .title{
+      text-align: center;
+      padding: 0px 30px;
+   }
+   .sponsors .cards{
+      max-width: 100%;
+   }
+}

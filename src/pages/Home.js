@@ -1,4 +1,5 @@
 import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import React, { useEffect } from 'react';
 
 
 import '../styles/Home.css';
@@ -24,12 +25,26 @@ import soofa from '.././assets/sponsors/soofa.png'
 import symm from '.././assets/sponsors/symmetrica.png'
 
 function Home() {
+
+  const handleFullScreen = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       {/* VIDEO */}
 
       <div className='front'>
-        <video src={video}  loop muted autoPlay/>
+        <video 
+          src={video}
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          controls={false} 
+          disablePictureInPicture 
+          disableRemotePlayback
+        />
         <div className='fade' />
         <div className='contain'>
           <p>

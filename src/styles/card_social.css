@@ -105,3 +105,31 @@
    background: -webkit-linear-gradient(135deg, rgb(13, 27, 77) 0%, rgb(42, 80, 121) 100%);
    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1A2A66", endColorstr="#1F5995", GradientType=1 );
 }
+
+@media only screen and (max-width: 1000px){
+   .social h1{
+      text-align: center;
+   }
+   .social .cards{
+      width: calc(100% - 40px);
+      padding: 0 20px;
+   }
+}
+
+@media only screen and (max-width: 600px){
+   .social .card_social{
+      flex-direction: column;
+      height: auto;
+   }
+   .social .card_social .app{
+      align-items: center;
+   }
+   .social .card_social .post{
+      width: 100%;
+   }
+   .social .card_social .post img{
+      max-height: 250px;
+      width: 100%;
+      object-fit: cover;
+   }
+}

@@ -87,3 +87,19 @@ footer span{
    text-align: center;
    color: white;
 }
+
+@media only screen and (max-width: 1000px){
+   footer .container{
+      padding-top: 30px;
+      gap: 20px;
+      flex-wrap: wrap;
+   }
+}
+@media only screen and (max-width: 700px){
+   footer .container{
+      padding-top: 50px;
+      padding-bottom: 50px;
+      flex-direction: column;
+      gap: 70px;
+   }
+}
