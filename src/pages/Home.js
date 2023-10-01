@@ -1,7 +1,3 @@
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
-import React, { useEffect } from 'react';
-
-
 import '../styles/Home.css';
 
 import CardResults from '.././layouts/card_results.js'
@@ -23,15 +19,11 @@ import miracom from '.././assets/sponsors/miracom.png'
 import cucorani from '.././assets/sponsors/popascucorani.png'
 import soofa from '.././assets/sponsors/soofa.png'
 import symm from '.././assets/sponsors/symmetrica.png'
+import uizard from'.././assets/sponsors/uizard_logo_yellow.png';
 
 function Home() {
-
-  const handleFullScreen = (e) => {
-    e.preventDefault();
-  };
-
   return (
-    <>
+    <main>
       {/* VIDEO */}
 
       <div className='front'>
@@ -143,6 +135,10 @@ function Home() {
             image_url={cucorani}
             redirect_url="https://www.popascucorani.ro/"
           />
+          <CardSponsors 
+            image_url={uizard}
+            redirect_url="https://app.uizard.io/"
+          />
         </div>
       </div>
 
@@ -172,7 +168,7 @@ function Home() {
         </div>
       </div>
 
-    </>
+    </main>
   );
 }
 

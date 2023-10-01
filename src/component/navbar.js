@@ -44,12 +44,8 @@ function NavBar() {
             setShowButton(false);
          }
       };
-
       window.addEventListener('resize', handleResize);
-
-      // Verifică lățimea la încărcarea paginii
       handleResize();
-
       return () => {
          window.removeEventListener('resize', handleResize);
       };
@@ -111,10 +107,10 @@ function NavBar() {
                </a>
             </div>
             <div className="right">
-               <a href="#" data-text="Support the team">Support the team</a>
-               <a href="#" data-text="Our team">Our team</a>
-               <a href="#" data-text="Portofolio">Portofolio</a>
-               <a href="#" data-text="Contact">Contact</a>
+               <a href="./support-us" data-text="Support the team">Support the team</a>
+               <a href="./our-team" data-text="Our team">Our team</a>
+               <a href="./portofolio" data-text="Portofolio">Portofolio</a>
+               <a href="./contact" data-text="Contact">Contact</a>
             </div>
             {showButton && (
                <button onClick={handleSubmit} className="close_nav"><AiOutlineMenu /></button>

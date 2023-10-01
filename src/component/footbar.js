@@ -12,10 +12,10 @@ function FootBar() {
                <div className='card left'>
                   <img src={logo} alt="image"/>
                   <div className='social_links'>
-                     <FaInstagram />
-                     <FaFacebook />
-                     <FaYoutube />
-                     <FaTiktok />
+                     <a href="https://www.instagram.com/northeastdynamics" target="_blank"><FaInstagram /></a>
+                     <a href="https://www.facebook.com/p/North-East-Dynamics-100067168255177/" target="_blank"><FaFacebook /></a>
+                     <a href="https://www.youtube.com/@northeastdynamics395" target="_blank"><FaYoutube /></a>
+                     <a href="https://www.tiktok.com/@northeastdynamics" target="_blank"><FaTiktok /></a>
                   </div>
                </div>
                <div className='card center'>
@@ -43,13 +43,14 @@ function FootBar() {
                      <p>Made by: </p>
                      <p>Administered by: </p>
                      <p>Team Leader: </p>
-                     <p>Design made with the help of: 
-                        <a href='https://app.uizard.io' target="_blank"><b> uizard.io</b></a>
-                     </p>
                   </div>
                </div>
             </div>
             <span className='reserv'>© 2023 • All rights reserved</span>
+            <span>
+               Design made with the help of: 
+               <a href='https://app.uizard.io' target="_blank"><b> uizard.io</b></a>
+            </span>
          </footer>
       </>
    );

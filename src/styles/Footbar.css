@@ -1,4 +1,5 @@
 footer{
+   margin-top: auto;
    width: 100%;
    min-height: 320px;
    padding-bottom: 20px;
@@ -32,6 +33,9 @@ footer .container .left .social_links{
    align-items: center;
    justify-content: space-between;
    font-size: 28px;
+}
+footer .container .left .social_links a{
+   color: white;
 }
 footer .container .left .social_links svg{
    transition: all 0.5s;
@@ -72,14 +76,14 @@ footer .container .right .contain{
    flex-direction: column;
    gap: 30px;
 }
-footer .container .right .contain a{
+footer span a{
    text-decoration: none;
    color: #F1F102;
 }
-footer .container .right .contain p{
+footer .container .right .contain p, footer span a{
    transition: all 0.5s;
 }
-footer .container .right .contain p:hover{
+footer .container .right .contain p:hover, footer span a:hover{
    scale: 1.05;
 }
 
