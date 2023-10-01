@@ -1,3 +1,4 @@
+import Fade from 'react-reveal/Fade';
 import '../styles/Home.css';
 
 import CardResults from '.././layouts/card_results.js'
@@ -29,7 +30,7 @@ function Home() {
   return (
     <main>
       {/* VIDEO */}
-
+      
       <div className='front'>
         <video 
           src={video}
@@ -61,119 +62,120 @@ function Home() {
       
       {/* ABOUT */}
 
-      <div className='about' name='about'>
-        <div className='left'>
-          <h1>About Our Team</h1>
-          <h3>North East Dynamics</h3>
-          <br /> <br />
-          <p>We started on this path since 2018. Every year we evolve and see that "Sky is not the limit". We make robots, but it's not enough. We want to make history! Season 8 brings us new challenges, but we're ready to give it our best shot and capitalize on Gracious Professionalism. Gracious team, Gracious work, Gracious minds. The Centerstage Challenge has arrived at our door - we're ready to give it our best (again). Welcome to our website! This is us.</p>
+      <Fade>
+        <div className='about' name='about'>
+          <div className='left'>
+            <h1>About Our Team</h1>
+            <h3>North East Dynamics</h3>
+            <br /> <br />
+            <p>We started on this path since 2018. Every year we evolve and see that "Sky is not the limit". We make robots, but it's not enough. We want to make history! Season 8 brings us new challenges, but we're ready to give it our best shot and capitalize on Gracious Professionalism. Gracious team, Gracious work, Gracious minds. The Centerstage Challenge has arrived at our door - we're ready to give it our best (again). Welcome to our website! This is us.</p>
+          </div>
+          <div className='right'>
+            <img src={about} />
+          </div>
         </div>
-        <div className='right'>
-          <img src={about} />
-        </div>
-      </div>
 
-      {/* RESULTS */}
-
-      <div className='results' id='results'>
-        <h1>The most important results</h1>
+        {/* RESULTS */}
         
-        <div className='cards'>
-          <CardResults 
-            image_url={national_championship_2023} 
-            position="l" 
-            title="National Championship 2023" 
-            description="20th place out of 160"
-          />
+        <div className='results' id='results'>
+          <h1>The most important results</h1>
+          
+          <div className='cards'>
+            <CardResults 
+              image_url={national_championship_2023} 
+              position="l" 
+              title="National Championship 2023" 
+              description="20th place out of 160"
+            />
 
-          <CardResults 
-            image_url={regional_2023} 
-            position="r" 
-            title="Regional robotics 2023" 
-            description="Control Award 2nd place"
-          />
+            <CardResults 
+              image_url={regional_2023} 
+              position="r" 
+              title="Regional robotics 2023" 
+              description="Control Award 2nd place"
+            />
 
-          <CardResults 
-            image_url={national_championship_2021} 
-            position="l" 
-            title="National Championship 2021" 
-            description="Winning Alliance 3rd place, Innovate Award 3rd place"
-          />
-        </div>
-      </div>
-
-      {/* SPONSORS */}
-
-      <div className='sponsors' id='sponsors'>
-        <div className='title'>
-          <h1>Our Sponsors</h1>
-          <h3>We thank all the sponsors for supporting us!</h3>
+            <CardResults 
+              image_url={national_championship_2021} 
+              position="l" 
+              title="National Championship 2021" 
+              description="Winning Alliance 3rd place, Innovate Award 3rd place"
+            />
+          </div>
         </div>
 
-        <div className='cards'>
-          <CardSponsors 
-            image_url={consiliul_local}
-            redirect_url="https://www.primariadorohoi.ro/"
-          />
-          <CardSponsors 
-            image_url={dorohoinews}
-            redirect_url="https://www.dorohoinews.ro"
-          />
-          <CardSponsors 
-            image_url={soofa}
-            redirect_url="https://www.sweetony.ro/"
-          />
-          <CardSponsors 
-            image_url={magistra}
-            redirect_url="https://www.facebook.com/farmaciamagistra/?locale=ro_RO"
-          />
-          <CardSponsors 
-            image_url={symm}
-            redirect_url="https://www.symmetrica.ro/"
-          />
-          <CardSponsors 
-            image_url={miracom}
-            redirect_url="https://www.miracom.eu/"
-          />
-          <CardSponsors 
-            image_url={cucorani}
-            redirect_url="https://www.popascucorani.ro/"
-          />
-          <CardSponsors 
-            image_url={uizard}
-            redirect_url="https://app.uizard.io/"
-          />
+        {/* SPONSORS */}
+
+        <div className='sponsors' id='sponsors'>
+          <div className='title'>
+            <h1>Our Sponsors</h1>
+            <h3>We thank all the sponsors for supporting us!</h3>
+          </div>
+
+          <div className='cards'>
+            <CardSponsors 
+              image_url={consiliul_local}
+              redirect_url="https://www.primariadorohoi.ro/"
+            />
+            <CardSponsors 
+              image_url={dorohoinews}
+              redirect_url="https://www.dorohoinews.ro"
+            />
+            <CardSponsors 
+              image_url={soofa}
+              redirect_url="https://www.sweetony.ro/"
+            />
+            <CardSponsors 
+              image_url={magistra}
+              redirect_url="https://www.facebook.com/farmaciamagistra/?locale=ro_RO"
+            />
+            <CardSponsors 
+              image_url={symm}
+              redirect_url="https://www.symmetrica.ro/"
+            />
+            <CardSponsors 
+              image_url={miracom}
+              redirect_url="https://www.miracom.eu/"
+            />
+            <CardSponsors 
+              image_url={cucorani}
+              redirect_url="https://www.popascucorani.ro/"
+            />
+            <CardSponsors 
+              image_url={uizard}
+              redirect_url="https://app.uizard.io/"
+            />
+          </div>
         </div>
-      </div>
 
-      {/* SOCIAL MEDIA */}
+        {/* SOCIAL MEDIA */}
 
-      <div className='social' id='media'>
-        <h1>The lates posts on our social relays</h1>
+        <div className='social' id='media'>
+          <h1>The lates posts on our social relays</h1>
 
-        <div className='cards'>
-          <CardSocial_Instagram 
-            image_url={img_insta}
-            description="Suntem în căutarea unor noi membri!💛 Începând de luni, 18 septembrie, îți poți arăta dorința de a te alătura familiei NED. Vă puteți înscrie în formularele lăsate la clase până vineri✨ Hurry up, the clock is ticking!"
-            redirect_url="https://www.instagram.com/p/CxN2FegsuBp/"
-          />
-          <CardSocial_Facebook
-            image_url={img_fb}
-            redirect_url="https://www.facebook.com/photo/?fbid=690072602898602&set=pcb.690072956231900"
-          />
-          <CardSocial_Youtube
-            image_url={img_yt}
-            description="North East Dynamics Rewind 2020-2021"
-            redirect_url="https://www.youtube.com/watch?v=uJ4tLyrJ44o&t=2s"
-          />
-          <CardSocial_TikTok
-            image_url={img_tk}
-            description="#firsttechchallengeromania cei mai supportive fani"
-            redirect_url="https://www.tiktok.com/@northeastdynamics/video/7205669745054551301"
-          />
+          <div className='cards'>
+            <CardSocial_Instagram 
+              image_url={img_insta}
+              description="Suntem în căutarea unor noi membri!💛 Începând de luni, 18 septembrie, îți poți arăta dorința de a te alătura familiei NED. Vă puteți înscrie în formularele lăsate la clase până vineri✨ Hurry up, the clock is ticking!"
+              redirect_url="https://www.instagram.com/p/CxN2FegsuBp/"
+            />
+            <CardSocial_Facebook
+              image_url={img_fb}
+              redirect_url="https://www.facebook.com/photo/?fbid=690072602898602&set=pcb.690072956231900"
+            />
+            <CardSocial_Youtube
+              image_url={img_yt}
+              description="North East Dynamics Rewind 2020-2021"
+              redirect_url="https://www.youtube.com/watch?v=uJ4tLyrJ44o&t=2s"
+            />
+            <CardSocial_TikTok
+              image_url={img_tk}
+              description="#firsttechchallengeromania cei mai supportive fani"
+              redirect_url="https://www.tiktok.com/@northeastdynamics/video/7205669745054551301"
+            />
+          </div>
         </div>
-      </div>
-
+      </Fade>
     </main>
   );
 }

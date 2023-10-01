@@ -10,16 +10,25 @@ import Loading from './component/loading';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-
+  
   useEffect(() => {
     const timer = setTimeout(() => {
+      document.body.style.overflow = 'visible';
       setLoading(false);
     }, 4000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = 'visible';
+    };
   }, []);
 
-  
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'visible';
+    };
+  }, []);
 
   return (
     <Router>
