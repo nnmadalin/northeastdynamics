@@ -11,6 +11,10 @@ import national_championship_2023 from '.././assets/images/national_championship
 import national_championship_2021 from '.././assets/images/national_championship-2021.jpg'
 import regional_2023 from '.././assets/images/regional-2023.jpg'
 
+import img_insta from '.././assets/images/img_insta.png'
+import img_fb from '.././assets/images/img_fb.png'
+import img_yt from '.././assets/images/img_yt.png'
+import img_tk from '.././assets/images/img_tk.png'
 
 import consiliul_local from '.././assets/sponsors/clDorohoi.png'
 import dorohoinews from '.././assets/sponsors/dorohoinews.png'
@@ -30,7 +34,7 @@ function Home() {
         <video 
           src={video}
           autoPlay 
-          muted 
+          muted
           loop 
           playsInline 
           controls={false} 
@@ -149,21 +153,23 @@ function Home() {
 
         <div className='cards'>
           <CardSocial_Instagram 
-            image_url="https://www.dorohoinews.ro/app/gethumbDetails.php?id=193653&w=1500&h=1500"
-            description="display: -webkit-box;"
-            redirect_url="https://www.popascucorani.ro/"
+            image_url={img_insta}
+            description="Suntem în căutarea unor noi membri!💛 Începând de luni, 18 septembrie, îți poți arăta dorința de a te alătura familiei NED. Vă puteți înscrie în formularele lăsate la clase până vineri✨ Hurry up, the clock is ticking!"
+            redirect_url="https://www.instagram.com/p/CxN2FegsuBp/"
           />
           <CardSocial_Facebook
-            image_url="https://www.dorohoinews.ro/app/gethumbDetails.php?id=193653&w=1500&h=1500"
-            description="display: -webkit-box;"
+            image_url={img_fb}
+            redirect_url="https://www.facebook.com/photo/?fbid=690072602898602&set=pcb.690072956231900"
           />
           <CardSocial_Youtube
-            image_url="https://www.dorohoinews.ro/app/gethumbDetails.php?id=193653&w=1500&h=1500"
-            description="display: -webkit-box;"
+            image_url={img_yt}
+            description="North East Dynamics Rewind 2020-2021"
+            redirect_url="https://www.youtube.com/watch?v=uJ4tLyrJ44o&t=2s"
           />
           <CardSocial_TikTok
-            image_url="https://www.dorohoinews.ro/app/gethumbDetails.php?id=193653&w=1500&h=1500"
-            description="display: -webkit-box;"
+            image_url={img_tk}
+            description="#firsttechchallengeromania cei mai supportive fani"
+            redirect_url="https://www.tiktok.com/@northeastdynamics/video/7205669745054551301"
           />
         </div>
       </div>
