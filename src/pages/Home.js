@@ -3,7 +3,7 @@ import '../styles/Home.css';
 
 import CardResults from '.././layouts/card_results.js'
 import CardSponsors from '.././layouts/card_sponsors.js'
-import {CardSocial_TikTok, CardSocial_Youtube, CardSocial_Facebook, CardSocial_Instagram} from '.././layouts/card_social.js'
+import { CardSocial_TikTok, CardSocial_Youtube, CardSocial_Facebook, CardSocial_Instagram } from '.././layouts/card_social.js'
 
 import video from '.././assets/video/Robot Reveal _ 2021.mp4'
 import about from '.././assets/images/about.jpg'
@@ -24,22 +24,22 @@ import miracom from '.././assets/sponsors/miracom.png'
 import cucorani from '.././assets/sponsors/popascucorani.png'
 import soofa from '.././assets/sponsors/soofa.png'
 import symm from '.././assets/sponsors/symmetrica.png'
-import uizard from'.././assets/sponsors/uizard_logo_yellow.png';
+import uizard from '.././assets/sponsors/uizard_logo_yellow.png';
 
 function Home() {
   return (
     <main>
       {/* VIDEO */}
-      
+
       <div className='front'>
-        <video 
+        <video
           src={video}
-          autoPlay 
+          autoPlay
           muted
-          loop 
-          playsInline 
-          controls={false} 
-          disablePictureInPicture 
+          loop
+          playsInline
+          controls={false}
+          disablePictureInPicture
           disableRemotePlayback
         />
         <div className='fade' />
@@ -48,22 +48,22 @@ function Home() {
             RO123
           </p>
           <h1>
-            North<span>East</span> 
+            North<span>East</span>
             <br />
             <span className='remove_space'>Dynamics</span>
           </h1>
           <p>
-          Regina Maria High School
-          <br />
-          Dorohoi - Botosani - Romania
+            Regina Maria High School
+            <br />
+            Dorohoi - Botosani - Romania
           </p>
         </div>
       </div>
-      
+
       {/* ABOUT */}
 
       <Fade>
-        <div className='about' name='about'>
+        <div className='about' id='about'>
           <div className='left'>
             <h1>About Our Team</h1>
             <h3>North East Dynamics</h3>
@@ -76,29 +76,29 @@ function Home() {
         </div>
 
         {/* RESULTS */}
-        
+
         <div className='results' id='results'>
           <h1>The most important results</h1>
-          
+
           <div className='cards'>
-            <CardResults 
-              image_url={national_championship_2023} 
-              position="l" 
-              title="National Championship 2023" 
+            <CardResults
+              image_url={national_championship_2023}
+              position="l"
+              title="National Championship 2023"
               description="20th place out of 160"
             />
 
-            <CardResults 
-              image_url={regional_2023} 
-              position="r" 
-              title="Regional robotics 2023" 
+            <CardResults
+              image_url={regional_2023}
+              position="r"
+              title="Regional robotics 2023"
               description="Control Award 2nd place"
             />
 
-            <CardResults 
-              image_url={national_championship_2021} 
-              position="l" 
-              title="National Championship 2021" 
+            <CardResults
+              image_url={national_championship_2021}
+              position="l"
+              title="National Championship 2021"
               description="Winning Alliance 3rd place, Innovate Award 3rd place"
             />
           </div>
@@ -113,35 +113,35 @@ function Home() {
           </div>
 
           <div className='cards'>
-            <CardSponsors 
+            <CardSponsors
               image_url={consiliul_local}
               redirect_url="https://www.primariadorohoi.ro/"
             />
-            <CardSponsors 
+            <CardSponsors
               image_url={dorohoinews}
               redirect_url="https://www.dorohoinews.ro"
             />
-            <CardSponsors 
+            <CardSponsors
               image_url={soofa}
               redirect_url="https://www.sweetony.ro/"
             />
-            <CardSponsors 
+            <CardSponsors
               image_url={magistra}
               redirect_url="https://www.facebook.com/farmaciamagistra/?locale=ro_RO"
             />
-            <CardSponsors 
+            <CardSponsors
               image_url={symm}
               redirect_url="https://www.symmetrica.ro/"
             />
-            <CardSponsors 
+            <CardSponsors
               image_url={miracom}
               redirect_url="https://www.miracom.eu/"
             />
-            <CardSponsors 
+            <CardSponsors
               image_url={cucorani}
               redirect_url="https://www.popascucorani.ro/"
             />
-            <CardSponsors 
+            <CardSponsors
               image_url={uizard}
               redirect_url="https://app.uizard.io/"
             />
@@ -154,7 +154,7 @@ function Home() {
           <h1>The lates posts on our social relays</h1>
 
           <div className='cards'>
-            <CardSocial_Instagram 
+            <CardSocial_Instagram
               image_url={img_insta}
               description="Suntem în căutarea unor noi membri!💛 Începând de luni, 18 septembrie, îți poți arăta dorința de a te alătura familiei NED. Vă puteți înscrie în formularele lăsate la clase până vineri✨ Hurry up, the clock is ticking!"
               redirect_url="https://www.instagram.com/p/CxN2FegsuBp/"

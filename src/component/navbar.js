@@ -1,5 +1,6 @@
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import React, { useState, useEffect } from 'react';
+
+import { scroller } from 'react-scroll';
 
 import { AiOutlineMenu } from "react-icons/ai";
 
@@ -20,14 +21,14 @@ function NavBar() {
 
    function handleSubmit(e) {
       e.preventDefault();
-      if(document.body.classList.contains('overflow-hidden')){
+      if (document.body.classList.contains('overflow-hidden')) {
          document.body.classList.remove('overflow-hidden');
          document.querySelector('nav').classList.remove('show');
          document.querySelector('nav').querySelector('.left').classList.remove('show');
          document.querySelector('nav').querySelector('.right').classList.remove('show');
          document.querySelector('nav').querySelector('.center').classList.remove('show');
       }
-      else{
+      else {
          document.body.classList.add('overflow-hidden');
          document.querySelector('nav').classList.add('show');
          document.querySelector('nav').querySelector('.left').classList.add('show');
@@ -51,55 +52,61 @@ function NavBar() {
       };
    }, []);
 
+   useEffect(() => {
+      const timer = setTimeout(() => {
+         const navigateToSection = () => {
+            const sectionId = window.location.hash.substr(1);
+            const element = document.getElementById(sectionId);
+
+            if (element) {
+               scroller.scrollTo(sectionId, {
+                  duration: 800,
+                  delay: 100,
+                  smooth: 'easeInOutCubic',
+                  offset: -120
+               });
+            }
+         };
+
+         if (window.location.hash) {
+            navigateToSection();
+         }
+
+         window.addEventListener('hashchange', navigateToSection);
+
+         return () => {
+            window.removeEventListener('hashchange', navigateToSection);
+         };
+      }, 4000);
+
+      return () => clearTimeout(timer);
+   }, []);
+
+
    return (
       <>
          <nav>
             <div className="left">
-               <Link
+               <a
                   data-text="About us"
-                  to="about"
+                  href="/#about"
                   onClick={removeNavbar}
-                  spy={true}
-                  isDynamic={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  delay={100}
-
-               >About us</Link>
-               <Link
+               >About us</a>
+               <a
                   data-text="Our results"
-                  to="results"
+                  href="/#results"
                   onClick={removeNavbar}
-                  spy={true}
-                  isDynamic={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  delay={100}
-               >Our results</Link>
-               <Link
+               >Our results</a>
+               <a
                   data-text="Sponsors"
-                  to="sponsors"
+                  href="/#sponsors"
                   onClick={removeNavbar}
-                  spy={true}
-                  isDynamic={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  delay={100}
-               >Sponsors</Link>
-               <Link
+               >Sponsors</a>
+               <a
                   data-text="Media"
-                  to="media"
+                  href="/#media"
                   onClick={removeNavbar}
-                  spy={true}
-                  isDynamic={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  delay={100}
-               >Media</Link>
+               >Media</a>
             </div>
             <div className="center">
                <a href='/'>
