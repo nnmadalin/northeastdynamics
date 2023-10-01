@@ -24,6 +24,11 @@ nav .left, nav .right{
    align-items: center;
    justify-content: space-around;
 }
+
+nav a.active{
+   color: #F1F102!important;
+}
+
 nav .left a, nav .right a {
    color: white;
    text-decoration: none;
@@ -50,7 +55,7 @@ nav .left a:hover:before, nav .right a:hover:before{
 }
 
 
-nav .left a:after, nav .right a:after{
+nav .left a:after, nav .right a:after, nav a.active:before{
 	content: '';
    position: absolute;
    left: 0;
@@ -65,7 +70,11 @@ nav .left a:after, nav .right a:after{
 	-webkit-transform: scale(0,1);
 	transform: scale(0,1);
 }
-
+nav a.active:before{
+   opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
 nav .left a:hover::after, nav .right a:hover::after{
    opacity: 1;
 	-webkit-transform: scale(1);

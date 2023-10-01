@@ -78,6 +78,17 @@ function NavBar() {
             window.removeEventListener('hashchange', navigateToSection);
          };
       }, 4000);
+      
+      const id_name = window.location.hash.substr(1);
+      const id_name_2 = window.location.pathname.split('/');
+      const links = document.querySelector('nav').querySelectorAll('a');
+      for (const link of links) {
+         if ((link.name === id_name || link.name === id_name_2[1]) && link.name != "") {
+            link.classList.add('active');
+         } else {
+            link.classList.remove('active');
+         }
+      }
 
       return () => clearTimeout(timer);
    }, []);
@@ -89,21 +100,25 @@ function NavBar() {
             <div className="left">
                <a
                   data-text="About us"
+                  name = "about"
                   href="/#about"
                   onClick={removeNavbar}
                >About us</a>
                <a
                   data-text="Our results"
+                  name = "results"
                   href="/#results"
                   onClick={removeNavbar}
                >Our results</a>
                <a
                   data-text="Sponsors"
+                  name = "sponsors"
                   href="/#sponsors"
                   onClick={removeNavbar}
                >Sponsors</a>
                <a
                   data-text="Media"
+                  name = "media"
                   href="/#media"
                   onClick={removeNavbar}
                >Media</a>
@@ -114,10 +129,10 @@ function NavBar() {
                </a>
             </div>
             <div className="right">
-               <a href="./support-us" data-text="Support the team">Support the team</a>
-               <a href="./our-team" data-text="Our team">Our team</a>
-               <a href="./portofolio" data-text="Portofolio">Portofolio</a>
-               <a href="./contact" data-text="Contact">Contact</a>
+               <a href="./support-us" data-text="Support the team" name="support-us">Support the team</a>
+               <a href="./our-team" data-text="Our team" name="our-team">Our team</a>
+               <a href="./portofolio" data-text="Portofolio" name="portofolio">Portofolio</a>
+               <a href="./contact" data-text="Contact" name="contact">Contact</a>
             </div>
             {showButton && (
                <button onClick={handleSubmit} className="close_nav"><AiOutlineMenu /></button>
