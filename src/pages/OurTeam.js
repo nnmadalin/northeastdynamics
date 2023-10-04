@@ -55,7 +55,7 @@ function Home() {
                   id_name="programmer"
                />
                <CardTeam 
-                  full_name={"Chelaru Răzvan"} 
+                  full_name={"Chelariu Răzvan"} 
                   occupation={"Programmer"} 
                   id_name="programmer"
                />

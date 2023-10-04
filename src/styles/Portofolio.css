@@ -1,15 +1,17 @@
-.page{
+.page {
    width: calc(100% - 10%);
    padding: 0px 5%;
 }
-.page .content{
+
+.page .content {
    display: flex;
    align-items: center;
-   justify-content:center;
+   justify-content: center;
    flex-direction: column;
    gap: 50px;
 }
-.page .content .container{
+
+.page .content .container {
    min-height: 50px;
    width: 100%;
    display: flex;
@@ -17,13 +19,70 @@
    flex-direction: column;
    gap: 30px;
 }
-.page .content .container .cards{
+
+.page .content .container .cards {
    display: flex;
    align-items: center;
    justify-content: center;
    gap: 50px;
 }
-hr{
+
+hr {
    width: 100%;
-   border-color: white;;
+   border-color: white;
+   ;
+}
+
+.page .content .container .gallery {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+}
+
+.page .content .container .gallery .column {
+   flex: 24%;
+   max-width: 24%;
+   padding: 0 4px;
+}
+
+.page .content .container .gallery .column .__react_modal_image__modal_container img{
+   width: auto!important
+}
+.page .content .container .gallery .column .__react_modal_image__modal_container {
+   top: 100px;
+}
+.page .content .container .gallery .column div {
+   margin-top: 8px;
+   vertical-align: middle;
+   width: 100%;
+}
+
+.page .content .container .gallery .column div img {
+   margin-top: 8px;
+   vertical-align: middle;
+   width: 100%;
+}
+@media screen and (max-width: 1000px) {
+   .page .content .container .gallery .column .__react_modal_image__modal_container {
+      top: 60px;
+   }
+   .page .content .container .gallery .column {
+      flex: 23%;
+      max-width: 23%;
+      padding: 0 4px;
+   }
+}
+
+@media screen and (max-width: 800px) {
+   .page .content .container .gallery .column {
+      flex: 48%;
+      max-width: 48%;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .page .content .container .gallery  .column {
+      flex: 100%;
+      max-width: 100%;
+   }
 }
