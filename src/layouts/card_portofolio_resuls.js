@@ -1,22 +1,21 @@
 import React from 'react';
 import '.././styles/card_portofolio_results.css'
 
-const CardNotebook = (props) => {
+const CardPortofolioResults = (props) => {
 
-   const { image_url, redirect, title} = props;
+   const { image_url, location, result} = props;
 
    return (
-      <a href={redirect} target='_blank'>
-         <div className='card_notebook'>
-            <div className='image'>
-               <img src={image_url} alt='image'/>
-            </div>
-            <div className='description'>
-               <h3>{title}</h3>
-            </div>
+      <div className='card_portofolio_results'>
+         <div className='image'>
+            <img src={image_url} alt='image'/>
          </div>
-      </a>
+         <div className='description'>
+            <h3>{result}</h3>
+            <h4>{location}</h4>
+         </div>
+      </div>
    );
 };
 
-export default CardNotebook;
+export default CardPortofolioResults;

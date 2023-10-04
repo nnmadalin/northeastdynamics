@@ -2,9 +2,13 @@ import '../styles/Portofolio.css';
 import '../styles/static.css';
 
 import CardNotebook from '.././layouts/card_notebooks'
+import CardPortofolioResults from '.././layouts/card_portofolio_resuls'
 
 import notebook_2023 from '.././assets/images/notebook_2023.png'
 import tehnic_2023 from '.././assets/docs/North East Dynamics RO12319083.pdf'
+
+import national_championship_2023 from '.././assets/images/national_championship-2023.JPG'
+
 
 function Portofolio() {
    return (
@@ -29,9 +33,36 @@ function Portofolio() {
                   />
                </div>
             </div>
+            
+            <hr />
+
             <div className='container'>
                <h3>Our results from the competitions!</h3>
+               <div className='cards'>
+                  <CardPortofolioResults 
+                     image_url={national_championship_2023}
+                     result="Locul 1"
+                     location="Dorohoi, Botosani"
+                  />
+                  <CardPortofolioResults 
+                     image_url={national_championship_2023}
+                     result="Locul 1"
+                     location="Dorohoi, Botosani"
+                  />
+                  <CardPortofolioResults 
+                     image_url={national_championship_2023}
+                     result="Locul 1"
+                     location="Dorohoi, Botosani"
+                  />
+                  <CardPortofolioResults 
+                     image_url={national_championship_2023}
+                     result="Locul 1"
+                     location="Dorohoi, Botosani"
+                  />
+               </div>
             </div>
+
+            <hr />
          </div>
       </main>
    );
