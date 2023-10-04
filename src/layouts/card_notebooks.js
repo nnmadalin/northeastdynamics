@@ -1,21 +1,22 @@
 import React from 'react';
-import '.././styles/card_results.css'
+import '.././styles/card_notebooks.css'
 
-const CardResults = (props) => {
+const CardNotebook = (props) => {
 
-   const { image_url, position, title, description } = props;
+   const { image_url, redirect, title} = props;
 
    return (
-      <div className={'card_results card_results_' + position}>
-         <div className='left'>
-            <img src={image_url} alt='image'/>
+      <a href={redirect} target='_blank'>
+         <div className='card_notebook'>
+            <div className='image'>
+               <img src={image_url} alt='image'/>
+            </div>
+            <div className='description'>
+               <h3>{title}</h3>
+            </div>
          </div>
-         <div className='right'>
-            <h1>{title}</h1>
-            <h2>{description}</h2>
-         </div>
-      </div>
+      </a>
    );
 };
 
-export default CardResults;
+export default CardNotebook;

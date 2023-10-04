@@ -5,4 +5,14 @@
 .page .content .container{
    min-height: 50px;
    width: 100%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 30px;
+}
+.page .content .container .cards{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 50px;
 }
