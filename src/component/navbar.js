@@ -7,6 +7,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 import '.././styles/Navbar.css'
 import logo from '.././assets/images/logo.png'
+import logo_full from '.././assets/images/logo_full.png'
 
 function NavBar() {
    const removeNavbar = () => {
@@ -27,6 +28,7 @@ function NavBar() {
          document.querySelector('nav').querySelector('.left').classList.remove('show');
          document.querySelector('nav').querySelector('.right').classList.remove('show');
          document.querySelector('nav').querySelector('.center').classList.remove('show');
+         document.querySelector('nav').querySelector('.nav_mobile').classList.remove('show');
       }
       else {
          document.body.classList.add('overflow-hidden');
@@ -34,6 +36,7 @@ function NavBar() {
          document.querySelector('nav').querySelector('.left').classList.add('show');
          document.querySelector('nav').querySelector('.right').classList.add('show');
          document.querySelector('nav').querySelector('.center').classList.add('show');
+         document.querySelector('nav').querySelector('.nav_mobile').classList.add('show');
       }
    }
 
@@ -77,7 +80,7 @@ function NavBar() {
          return () => {
             window.removeEventListener('hashchange', navigateToSection);
          };
-      }, 4000);
+      }, 3000);
       
       const id_name = window.location.hash.substr(1);
       const id_name_2 = window.location.pathname.split('/');
@@ -135,7 +138,12 @@ function NavBar() {
                <a href="./contact" data-text="Contact" name="contact">Contact</a>
             </div>
             {showButton && (
-               <button onClick={handleSubmit} className="close_nav"><AiOutlineMenu /></button>
+               <div className='nav_mobile'>
+                  <a href='/'>
+                     <img src={logo_full} alt="img" />
+                  </a>
+                  <button onClick={handleSubmit} className="close_nav"><AiOutlineMenu /></button>
+               </div>
             )}
          </nav>
       </>

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+.page{
+   min-height: 100vh;
+   margin-top: 160px;
+   margin-bottom: 100px;
+   width: 100%;
+   font-family: 'Roboto', sans-serif;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 50px;
+   color: white;
+}
+.page .title{
+   width: 100%;
+   text-align: center;
+}
+.page .title h1{
+   font-size: 45px;
+   color: #F1F102;
+}
+.page .title h2{
+   font-weight: normal;
+}
+.page .content{
+   width: calc(100% - 100px);
+   padding: 0px 50px;
+}
+
+@media only screen and (max-width: 1000px){
+   .page{
+      margin-top: 100px;
+   }
+}

@@ -12,7 +12,7 @@
    gap: 40px;
    z-index: 99999999;
    opacity: 1;
-   animation: fadeOut 1s ease 3s forwards;
+   animation: fadeOut 1s ease 2s forwards;
 }
 @keyframes fadeOut {
    0% {
@@ -21,7 +21,7 @@
    100% {
       opacity: 0;
    }
- }
+}
 .loading img{
    width: 300px;
 }

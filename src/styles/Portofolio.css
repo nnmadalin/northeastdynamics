@@ -1,0 +1,8 @@
+.page{
+   width: calc(100% - 10%);
+   padding: 0px 5%;
+}
+.page .content .container{
+   min-height: 50px;
+   width: 100%;
+}

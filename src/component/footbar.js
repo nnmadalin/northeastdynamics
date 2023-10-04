@@ -40,8 +40,8 @@ function FootBar() {
                </div>
                <div className='card right'>
                   <div className="contain">
-                     <p>Made by: </p>
-                     <p>Administered by: </p>
+                     <p>Made by: <a href="https://www.nnmadalin.me" target="_blank">Neaună Mădălin</a></p>
+                     <p>Administered by: <a href="https://www.nnmadalin.me" target="_blank">Neaună Mădălin</a> <br /> Pomârleanu Florin</p>
                      <p>Team Leader: </p>
                   </div>
                </div>

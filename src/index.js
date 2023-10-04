@@ -3,9 +3,15 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './styles/index.css';
+
 import Home from './pages/Home';
+import SupportUs from './pages/SupportUs';
+import OurTeam from './pages/OurTeam';
+import Portofolio from './pages/Portofolio';
+
 import NavBar from './component/navbar';
 import FootBar from './component/footbar';
+
 import Loading from './component/loading';
 
 const App = () => {
@@ -15,7 +21,7 @@ const App = () => {
     const timer = setTimeout(() => {
       document.body.style.overflow = 'visible';
       setLoading(false);
-    }, 4000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);
@@ -35,7 +41,9 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<><Home /></>} />
-        <Route path="/support-us" element={<></>} />
+        <Route path="/support-us" element={<><SupportUs /></>} />
+        <Route path="/our-team" element={<><OurTeam /></>} />
+        <Route path="/portofolio" element={<><Portofolio /></>} />
       </Routes>
       <FootBar />
       {loading && <Loading />}
