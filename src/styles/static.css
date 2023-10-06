@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
 .page{
-   min-height: 100vh;
+   min-height: 100%;
    margin-top: 160px;
    margin-bottom: 100px;
    width: 100%;

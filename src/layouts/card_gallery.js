@@ -1,5 +1,5 @@
-import React from 'react';
-import Lightbox  from "react-modal-image";
+import React, { useState } from 'react';
+import Lightbox from "react-modal-image";
 
 
 import img1 from '.././assets/foto_gallery/9a3393c0-5fbc-4713-999a-847284b54be1.JPG'
@@ -7,7 +7,6 @@ import img2 from '.././assets/foto_gallery/43b087f6-ee0a-4fe2-a7c4-9ccd6038066b.
 import img3 from '.././assets/foto_gallery/49fa9220-2766-49b6-af26-e8bd52f54775.JPG'
 import img4 from '.././assets/foto_gallery/909ed3d8-00ac-4b3c-bf83-30fc15419d9e.JPG'
 import img5 from '.././assets/foto_gallery/9416E384-378F-4D95-ADEF-A235257B40DF.JPG'
-import img6 from '.././assets/foto_gallery/a956b806-6d00-49b5-b821-e553d781f714.JPG'
 import img7 from '.././assets/foto_gallery/IMG_1114.jpg'
 
 import img8 from '.././assets/foto_gallery/IMG_2726.jpg'
@@ -33,45 +32,43 @@ import img25 from '.././assets/foto_gallery/IMG-20220906-WA0012.JPG'
 
 const CardGallery = (props) => {
 
+   const [loadedImages, setLoadedImages] = useState({});
+
+   const handleImageLoad = (src) => {
+      setLoadedImages({ ...loadedImages, [src]: true });
+   };
+
+   const img_col1 = [img1, img2, img3, img4, img5, img7, img13];
+   const img_col2 = [img8, img9, img10, img11, img12];
+   const img_col3 = [img15, img16, img17, img18, img19];
+   const img_col4 = [img21, img22, img23, img24, img25, img14, img20];
+
+
    return (
       <>
-         <div class="column">
-            <Lightbox classname="image"  small={img1} large={img1}  />
-            <Lightbox classname="image"  small={img2} large={img2}  />
-            <Lightbox classname="image"  small={img3} large={img3}  />
-            <Lightbox classname="image"  small={img4} large={img4}  />
-            <Lightbox classname="image"  small={img5} large={img5}  />
-            <Lightbox classname="image"  small={img6} large={img6}  />
-            <Lightbox classname="image"  small={img7} large={img7}  />
+         <div className="column">
+            {img_col1.map((src, index) => (
+               <Lightbox className="image" small={src} large={src} />
+            ))}
          </div>
 
-         <div class="column">
-            <Lightbox classname="image"  small={img8} large={img8}  />
-            <Lightbox classname="image"  small={img9} large={img9}  />
-            <Lightbox classname="image"  small={img10} large={img10}  />
-            <Lightbox classname="image"  small={img11} large={img11}  />
-            <Lightbox classname="image"  small={img12} large={img12}  />
+         <div className="column">
+            {img_col2.map((src, index) => (
+               <Lightbox className="image" small={src} large={src} />
+            ))}
          </div>
 
-         <div class="column">
-            <Lightbox classname="image"  small={img15} large={img15}  />
-            <Lightbox classname="image"  small={img16} large={img16}  />
-            <Lightbox classname="image"  small={img17} large={img17}  />
-            <Lightbox classname="image"  small={img18} large={img18}  />
-            <Lightbox classname="image"  small={img19} large={img19}  />
-            <Lightbox classname="image"  small={img20} large={img20}  />
+         <div className="column">
+            {img_col3.map((src, index) => (
+               <Lightbox className="image" small={src} large={src} />
+            ))}
          </div>
 
-         <div class="column">
-            <Lightbox classname="image"  small={img21} large={img21}  />
-            <Lightbox classname="image"  small={img22} large={img22}  />
-            <Lightbox classname="image"  small={img23} large={img23}  />
-            <Lightbox classname="image"  small={img24} large={img24}  />
-            <Lightbox classname="image"  small={img25} large={img25}  />
-            <Lightbox classname="image"  small={img14} large={img14}  />
-            <Lightbox classname="image"  small={img13} large={img13}  />
+         <div className="column">
+            {img_col4.map((src, index) => (
+               <Lightbox className="image" small={src} large={src} />
+            ))}
          </div>
-
       </>
    );
 };

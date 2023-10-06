@@ -1,0 +1,149 @@
+.page {
+   width: calc(100% - 10%);
+   padding: 0px 5%;
+   font-family: 'Roboto', sans-serif;
+   padding-bottom: 50px;
+}
+.page .title{
+   margin-bottom: 50px;
+}
+
+.page .content {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: row;
+   gap: 100px;
+   flex-wrap: wrap;
+}
+.page .content .card{
+   flex: 1 auto;
+   text-align: left;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+.page .content .card .card_title h2{
+   font-weight: bold;
+   font-size: 35px;
+   color: #F1F102;
+}
+.page .content .card .card_title h3{
+   font-size: 23px;
+}
+.page .content .card form{
+   max-width: 1000px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   gap: 15px 20px;
+   flex-wrap: wrap;
+}
+.page .content .card form .input_flex{
+   max-width: calc(50% - 10px);
+   width: 100%;
+   box-sizing: border-box;
+}
+.page .content .card form input, .page .content .card form textarea{
+   color: white;
+   border: none;
+   padding: 18px 10px;
+   border-radius: 10px;
+   background-color: #5B6170;
+   font-size: 15px;
+   font-family: 'Roboto', sans-serif;
+   box-shadow: 0px 0px 27px 4px rgba(255, 255, 255, 0.1);
+}
+.page .content .card form textarea{
+   min-height: 150px;
+}
+.page .content .card form input::placeholder, .page .content .card form textarea::placeholder{
+   color: white;
+}
+.page .content .card form .input_flex_full{
+   flex-basis: 100%;
+}
+.page .content .card form input:focus, .page .content .card form textarea:focus{
+   outline: none;
+   border: 2px solid #F1F102;
+}
+
+.page .content .card form .div_btn{
+   margin-top: 20px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+.page .content .card form .div_btn button{
+   padding: 15px 30px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   font-size: 16px;
+   border-radius: 10px;
+   background-color: #F1F102;
+   border: none;
+   transition: all 0.3s;
+   cursor: pointer;
+   box-shadow: 0px 0px 27px 3px rgba(255, 255, 255, 0.5);
+}
+.page .content .card form .div_btn button:hover{
+   scale: 1.05;
+}
+
+.page .content .card.info{
+   gap: 50px;
+   align-items: center;
+}
+.page .content .card .section{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 35px;
+}
+.page .content .card .section .rows{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.page .content .card .section .rows .row{
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   font-weight: bold;
+}
+.page .content .card .section .rows  .row svg{
+   font-size: 28px;
+}
+.page .content .card .section h3{
+   font-weight: bold;
+   font-size: 35px;
+   color: #F1F102;
+}
+.page .content .card .section .columns{
+   width: 300px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 28px;
+}
+.page .content .card .section .columns a{
+   color: white;
+}
+.page .content .card .section .columns svg{
+   transition: all 0.5s;
+   cursor: pointer;
+}
+.page .content .card .section .columns  svg:hover{
+   scale: 1.1;
+   color: #F1F102;
+}
+
+@media only screen and (max-width: 1000px){
+   .page {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+   }
+}

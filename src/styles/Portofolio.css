@@ -20,6 +20,10 @@
    gap: 30px;
 }
 
+.page .content .container h2{
+   font-size: 23px;
+}
+
 .page .content .container .cards {
    display: flex;
    align-items: center;
@@ -49,7 +53,7 @@ hr {
    width: auto!important
 }
 .page .content .container .gallery .column .__react_modal_image__modal_container {
-   top: 100px;
+   top: 90px;
 }
 .page .content .container .gallery .column div {
    margin-top: 8px;

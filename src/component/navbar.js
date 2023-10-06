@@ -16,6 +16,7 @@ function NavBar() {
       document.querySelector('nav').querySelector('.left').classList.remove('show');
       document.querySelector('nav').querySelector('.right').classList.remove('show');
       document.querySelector('nav').querySelector('.center').classList.remove('show');
+
    };
 
    const [showButton, setShowButton] = useState(false);
@@ -40,6 +41,25 @@ function NavBar() {
       }
    }
 
+   function change_active() {
+      const id_name = window.location.hash.substr(1);
+      const id_name_2 = window.location.pathname.split('/');
+      const links = document.querySelector('nav').querySelectorAll('a');
+
+      for (const link of links) {
+         if (link.name === id_name && link.name != "") {
+            link.classList.add('active');
+         }
+         else if (link.name === id_name_2[1] && link.name != "") {
+            link.classList.add('active');
+         }
+         else {
+            link.classList.remove('active');
+         }
+      }
+
+   }
+
    useEffect(() => {
       const handleResize = () => {
          if (window.innerWidth < 1000) {
@@ -53,6 +73,7 @@ function NavBar() {
       return () => {
          window.removeEventListener('resize', handleResize);
       };
+
    }, []);
 
    useEffect(() => {
@@ -81,19 +102,33 @@ function NavBar() {
             window.removeEventListener('hashchange', navigateToSection);
          };
       }, 3000);
-      
+
       const id_name = window.location.hash.substr(1);
       const id_name_2 = window.location.pathname.split('/');
       const links = document.querySelector('nav').querySelectorAll('a');
+
       for (const link of links) {
-         if ((link.name === id_name || link.name === id_name_2[1]) && link.name != "") {
+         console.log(id_name_2[1])
+         if (link.name === id_name && link.name != "") {
             link.classList.add('active');
-         } else {
+         }
+         else if (link.name === id_name_2[1] && link.name != "") {
+            link.classList.add('active');
+         }
+         else {
             link.classList.remove('active');
          }
       }
 
       return () => clearTimeout(timer);
+   }, []);
+
+   useEffect(() => {
+      const interval = setInterval(() => {
+         change_active()
+      }, 500); 
+   
+      return () => clearInterval(interval);
    }, []);
 
 
@@ -103,25 +138,25 @@ function NavBar() {
             <div className="left">
                <a
                   data-text="About us"
-                  name = "about"
+                  name="about"
                   href="/#about"
                   onClick={removeNavbar}
                >About us</a>
                <a
                   data-text="Our results"
-                  name = "results"
+                  name="results"
                   href="/#results"
                   onClick={removeNavbar}
                >Our results</a>
                <a
                   data-text="Sponsors"
-                  name = "sponsors"
+                  name="sponsors"
                   href="/#sponsors"
                   onClick={removeNavbar}
                >Sponsors</a>
                <a
                   data-text="Media"
-                  name = "media"
+                  name="media"
                   href="/#media"
                   onClick={removeNavbar}
                >Media</a>

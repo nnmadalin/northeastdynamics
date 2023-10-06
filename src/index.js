@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import SupportUs from './pages/SupportUs';
 import OurTeam from './pages/OurTeam';
 import Portofolio from './pages/Portofolio';
+import Contact from './pages/Contact';
 
 import NavBar from './component/navbar';
 import FootBar from './component/footbar';
@@ -35,15 +36,16 @@ const App = () => {
       document.body.style.overflow = 'visible';
     };
   }, []);
-
+  //<Route path="/support-us" element={<><SupportUs /></>} /> 
   return (
     <Router>
       <NavBar />
       <Routes>
         <Route path="/" element={<><Home /></>} />
-        <Route path="/support-us" element={<><SupportUs /></>} />
+        
         <Route path="/our-team" element={<><OurTeam /></>} />
         <Route path="/portofolio" element={<><Portofolio /></>} />
+        <Route path="/contact" element={<><Contact /></>} />
       </Routes>
       <FootBar />
       {loading && <Loading />}
