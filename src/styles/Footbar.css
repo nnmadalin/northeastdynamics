@@ -1,7 +1,8 @@
 footer{
    margin-top: auto;
-   width: 100%;
+   width: calc(100% - 40px);
    min-height: 320px;
+   padding: 0px 20px;
    padding-bottom: 20px;
    background-color: #3F4452;
    display: flex;
@@ -46,7 +47,8 @@ footer .container .left .social_links svg:hover{
    color: #F1F102;
 }
 footer .container .left img{
-   width: 300px;
+   width: 100%;
+   max-width: 350px;
 }
 
 footer .container .center .rows{

@@ -33,3 +33,9 @@
       margin-top: 100px;
    }
 }
+@media screen and (max-width: 800px) {
+   .page{
+      width: 100%!important;
+      padding: 0!important;
+   }
+}

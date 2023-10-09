@@ -9,6 +9,7 @@ import SupportUs from './pages/SupportUs';
 import OurTeam from './pages/OurTeam';
 import Portofolio from './pages/Portofolio';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound'
 
 import NavBar from './component/navbar';
 import FootBar from './component/footbar';
@@ -42,10 +43,10 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<><Home /></>} />
-        
         <Route path="/our-team" element={<><OurTeam /></>} />
         <Route path="/portofolio" element={<><Portofolio /></>} />
         <Route path="/contact" element={<><Contact /></>} />
+        <Route path="/*" element={<><NotFound /></>} />
       </Routes>
       <FootBar />
       {loading && <Loading />}

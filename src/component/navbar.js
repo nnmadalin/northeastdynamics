@@ -108,7 +108,6 @@ function NavBar() {
       const links = document.querySelector('nav').querySelectorAll('a');
 
       for (const link of links) {
-         console.log(id_name_2[1])
          if (link.name === id_name && link.name != "") {
             link.classList.add('active');
          }

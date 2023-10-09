@@ -18,6 +18,7 @@
    justify-content: center;
    flex-direction: column;
    gap: 30px;
+   text-align: center;
 }
 
 .page .content .container h2{
@@ -29,12 +30,15 @@
    align-items: center;
    justify-content: center;
    gap: 50px;
+   text-align: center;
 }
-
+.page .content .container .cards a{
+   max-width: 400px;
+   width: 100%;
+}
 hr {
    width: 100%;
    border-color: white;
-   ;
 }
 
 .page .content .container .gallery {
@@ -77,6 +81,10 @@ hr {
       flex: 23%;
       max-width: 23%;
       padding: 0 4px;
+   }
+   .page .content{
+      padding: 0 10px;
+      width: calc(100% - 20px);
    }
 }
 

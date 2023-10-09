@@ -139,11 +139,3 @@
    scale: 1.1;
    color: #F1F102;
 }
-
-@media only screen and (max-width: 1000px){
-   .page {
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-   }
-}

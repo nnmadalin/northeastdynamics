@@ -88,7 +88,7 @@ function Home() {
       else if (formData.email.trim() === '') {
          newErrors = 'Email is required!';
          valid = false;
-      }else if (formData.message.trim() === '') {
+      } else if (formData.message.trim() === '') {
          newErrors = 'Message is required!';
          valid = false;
       } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
@@ -105,8 +105,21 @@ function Home() {
       const isValid = validateForm();
 
       if (isValid) {
-         notify_success("The email was sent successfully! I have emailed you a copy of the message!");
+         notify_success("The email was sent successfully!");
          console.log('Form submitted:', formData);
+
+         const options = {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+         };
+
+         console.log(options.body)
+
+         fetch('https://formspree.io/f/mjvqpdly', options);
+
          setFormData({
             firstName: '',
             lastName: '',
@@ -114,7 +127,7 @@ function Home() {
             phone: '',
             message: ''
          });
-      
+
       }
    }
 
@@ -130,11 +143,11 @@ function Home() {
                   <h3>Leave a message</h3>
                </div>
                <form>
-                  <input type="text" placeholder='First Name' name = "firstName" value={formData.firstName} onChange={handleChange} className='input_flex focus-border' />
+                  <input type="text" placeholder='First Name' name="firstName" value={formData.firstName} onChange={handleChange} className='input_flex focus-border' />
                   <input type="text" placeholder='Last Name' name="lastName" value={formData.lastName} onChange={handleChange} className='input_flex' />
                   <input type="email" placeholder='Mail' name="email" value={formData.email} onChange={handleChange} className='input_flex' />
                   <input type="tel" placeholder='Phone' name="phone" value={formData.phone} onChange={handleChange} className='input_flex' />
-                  <textarea placeholder='Message' name="message" value={formData.message} onChange={handleChange} className='input_flex_full'/>
+                  <textarea placeholder='Message' name="message" value={formData.message} onChange={handleChange} className='input_flex_full' />
                   <div className='div_btn'>
                      <button
                         onClick={handleSubmit}

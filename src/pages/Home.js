@@ -37,7 +37,7 @@ function Home() {
           autoPlay
           muted
           loop
-          playsInline
+          playsinline
           controls={false}
           disablePictureInPicture
           disableRemotePlayback
