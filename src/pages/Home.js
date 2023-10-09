@@ -33,15 +33,16 @@ function Home() {
 
       <div className='front'>
         <video
-          src={video}
-          autoPlay
+          autoPlay={true} 
           muted
-          loop
-          playsinline
-          controls={false}
+          loop={true}
+          controls={false} 
+          playsInline
           disablePictureInPicture
           disableRemotePlayback
-        />
+        >
+          <source src={video} type="video/mp4" />
+        </video>
         <div className='fade' />
         <div className='contain'>
           <p>
