@@ -157,7 +157,7 @@ function Home() {
           <div className='cards'>
             <CardSocial_Instagram
               image_url={img_insta}
-              description="Suntem în căutarea unor noi membri!💛 Începând de luni, 18 septembrie, îți poți arăta dorința de a te alătura familiei NED. Vă puteți înscrie în formularele lăsate la clase până vineri✨ Hurry up, the clock is ticking!"
+              description="Suntem pregătiți să ajutăm următoarele generații să descopere tainele roboticii si ce înseamnă familia NED💛"
               redirect_url="https://www.instagram.com/p/CxN2FegsuBp/"
             />
             <CardSocial_Facebook
