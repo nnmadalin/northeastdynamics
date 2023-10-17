@@ -25,6 +25,10 @@ import cucorani from '.././assets/sponsors/popascucorani.png'
 import soofa from '.././assets/sponsors/soofa.png'
 import symm from '.././assets/sponsors/symmetrica.png'
 import uizard from '.././assets/sponsors/uizard_logo_yellow.png';
+import vegas from '.././assets/sponsors/vegas.png';
+import prospexi from '.././assets/sponsors/prospexi.png';
+import megatitan from '.././assets/sponsors/megatitan.png';
+import gmarms from '.././assets/sponsors/gmarms.png';
 
 function Home() {
   return (
@@ -141,6 +145,22 @@ function Home() {
             <CardSponsors
               image_url={cucorani}
               redirect_url="https://www.popascucorani.ro/"
+            />
+            <CardSponsors
+              image_url={vegas}
+              redirect_url="https://www.facebook.com/vegaspubdorohoi/"
+            />
+            <CardSponsors
+              image_url={prospexi}
+              redirect_url="https://edituraprospexi.com/"
+            />
+            <CardSponsors
+              image_url={megatitan}
+              redirect_url="https://www.megatitan.ro/"
+            />
+            <CardSponsors
+              image_url={gmarms}
+              redirect_url="https://www.facebook.com/GavroMarm/"
             />
             <CardSponsors
               image_url={uizard}
