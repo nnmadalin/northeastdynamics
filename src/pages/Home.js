@@ -29,6 +29,7 @@ import vegas from '.././assets/sponsors/vegas.png';
 import prospexi from '.././assets/sponsors/prospexi.png';
 import megatitan from '.././assets/sponsors/megatitan.png';
 import gmarms from '.././assets/sponsors/gmarms.png';
+import apolodora from '.././assets/sponsors/apolodora.png';
 
 function Home() {
   return (
@@ -163,6 +164,9 @@ function Home() {
               redirect_url="https://www.facebook.com/GavroMarm/"
             />
             <CardSponsors
+              image_url={apolodora}
+            />
+            <CardSponsors
               image_url={uizard}
               redirect_url="https://app.uizard.io/"
             />
@@ -177,8 +181,8 @@ function Home() {
           <div className='cards'>
             <CardSocial_Instagram
               image_url={img_insta}
-              description="Suntem pregătiți să ajutăm următoarele generații să descopere tainele roboticii si ce înseamnă familia NED💛"
-              redirect_url="https://www.instagram.com/p/CxN2FegsuBp/"
+              description="Elevii clasei a 8-a de la școala Gimnaziala “Alexandru Ioan Cuza” au avut ocazia de a vizita laboratorul si de a se juca cu robotul. Echipa noastră le-a prezentat ce presupune competitia First Tech Challenge si au răspuns la întrebările lor. Îi așteptăm si la anul cu brațele deschise, însă de data aceasta ca si voluntari!💛"
+              redirect_url="https://www.instagram.com/p/CyypIbpLs9S/?img_index=1"
             />
             <CardSocial_Facebook
               image_url={img_fb}
