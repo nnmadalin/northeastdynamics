@@ -181,8 +181,8 @@ function Home() {
           <div className='cards'>
             <CardSocial_Instagram
               image_url={img_insta}
-              description="Elevii clasei a 8-a de la școala Gimnaziala “Alexandru Ioan Cuza” au avut ocazia de a vizita laboratorul si de a se juca cu robotul. Echipa noastră le-a prezentat ce presupune competitia First Tech Challenge si au răspuns la întrebările lor. Îi așteptăm si la anul cu brațele deschise, însă de data aceasta ca si voluntari!💛"
-              redirect_url="https://www.instagram.com/p/CyypIbpLs9S/?img_index=1"
+              description="Suntem bucuroși că am acceptat provocarea celor de la @cnapsys 🍬, echipa noastră s-a distrat mult costumând robotul!💛🖤🎃"
+              redirect_url="https://www.instagram.com/p/CzEX3uIMV1h/?img_index=1"
             />
             <CardSocial_Facebook
               image_url={img_fb}
